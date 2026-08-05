@@ -1,16 +1,14 @@
-# React + Vite
+# Shun Ling Lim Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website!
 
-Currently, two official plugins are available:
+This portfolio showcases my frontend development skills, technical background, and featured projects. It currently includes two sample web applications:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Tioman Trip Gateway – A responsive travel website with an interactive user interface.
+- Malaysia Weather Today – A responsive weather application powered by the Open-Meteo API.
 
-## React Compiler
+## Live Portfolio
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🌐 https://shunlinglim.github.io/shunlinglim-portfolio/
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Thank you for taking the time to visit my portfolio. I welcome opportunities to contribute as a Frontend Developer and would be delighted to discuss how I can add value to your team.

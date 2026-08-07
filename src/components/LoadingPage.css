@@ -1,0 +1,218 @@
+section.loading-page {
+    opacity: 1;
+    height: 100vh;
+    height: 100dvh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    background-image: url('../assets/wallpaper-gradient.png');
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out 1s;
+}
+
+.loading-page.loading-fade-out {
+    opacity: 0;
+}
+
+.loading-page .h1-wrapper {
+    width: 1061.19px;
+    overflow: hidden;
+    color: var(--white);
+}
+
+.loading-page .group {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5rem;
+    animation: spin-to-left-loading 10s infinite ease-in-out;
+}
+
+@keyframes spin-to-left-loading {
+    0% { left: 0; }
+    75%, 100% { left: calc(-1061.19px - 5rem); }
+}
+
+.loading-page h1 {
+    font-size: 6rem;
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.loading-page .scrollbar-width-spacing {
+    height: 100%;
+}
+
+@media (max-width: 1460px) {
+    .loading-page .h1-wrapper {
+        width: 955.08px;
+    }
+
+    .loading-page h1 {
+        font-size: calc(6rem * 0.9);
+    }
+
+    @keyframes spin-to-left-loading {
+        0% { left: 0; }
+        75%, 100% { left: calc(-955.08px - 5rem); }
+    }
+}
+
+@media (max-width: 1330px) {
+    .loading-page .h1-wrapper {
+        width: 848.95px;
+    }
+
+    .loading-page h1 {
+        font-size: calc(6rem * 0.8);
+    }
+
+    @keyframes spin-to-left-loading {
+        0% { left: 0; }
+        75%, 100% { left: calc(-848.95px - 5rem); }
+    }
+}
+
+@media (max-width: 1210px) {
+    .loading-page .h1-wrapper {
+        width: 795.89px;
+    }
+
+    .loading-page h1 {
+        font-size: calc(6rem * 0.75);
+    }
+
+    @keyframes spin-to-left-loading {
+        0% { left: 0; }
+        75%, 100% { left: calc(-795.89px - 5rem); }
+    }
+}
+
+@media (max-width: 1150px) {
+    .loading-page .h1-wrapper {
+        width: 742.84px;
+    }
+
+    .loading-page h1 {
+        font-size: calc(6rem * 0.7);
+    }
+
+    @keyframes spin-to-left-loading {
+        0% { left: 0; }
+        75%, 100% { left: calc(-742.84px - 5rem); }
+    }
+}
+
+@media (max-width: 1070px) {
+    .loading-page .h1-wrapper {
+        width: 689.78px;
+    }
+
+    .loading-page h1 {
+        font-size: calc(6rem * 0.65);
+    }
+
+    @keyframes spin-to-left-loading {
+        0% { left: 0; }
+        75%, 100% { left: calc(-689.78px - 3rem); }
+    }
+}
+
+@media (max-width: 930px) {
+    .loading-page .h1-wrapper {
+        width: 636.71px;
+    }
+
+    .loading-page h1 {
+        font-size: calc(6rem * 0.6);
+    }
+
+    @keyframes spin-to-left-loading {
+        0% { left: 0; }
+        75%, 100% { left: calc(-636.71px - 3rem); }
+    }
+}
+
+@media (max-width: 860px) {
+    .loading-page .h1-wrapper {
+        width: calc(100% - 5rem - 3.8rem - 3.8rem);
+    }
+
+    .loading-page .group {
+        animation: spin-to-left-loading 10s infinite linear;
+    }
+
+    .loading-page h1 {
+        font-size: calc(6rem * 0.55);
+    }
+
+    @keyframes spin-to-left-loading {
+        0% { left: 0; }
+        100% { left: calc(-583.65px - 3rem); }
+    }
+}
+
+@media (max-width: 780px) {
+    .loading-page h1 {
+        font-size: calc(6rem * 0.5);
+    }
+
+    @keyframes spin-to-left-loading {
+        0% { left: 0; }
+        100% { left: calc(-530.6px - 2rem); }
+    }
+}
+
+@media (max-width: 720px) {
+    .loading-page .h1-wrapper {
+        width: calc(100% - 5rem - 2.5rem - 2.5rem);
+    }
+}
+
+@media (max-width: 680px) {
+    .loading-page .h1-wrapper {
+        width: calc(100% - 2.5rem - 2.5rem - 2.5rem);
+    }
+}
+
+@media (max-width: 620px) {
+    .loading-page h1 {
+        font-size: calc(6rem * 0.45);
+    }
+
+    @keyframes spin-to-left-loading {
+        0% { left: 0; }
+        100% { left: calc(-477.54px - 1.3rem); }
+    }
+}
+
+@media (max-width: 510px) {
+    .loading-page .h1-wrapper {
+        width: calc(100% - 2.5rem - 1.5rem - 1.5rem);
+    }
+}
+
+@media (max-width: 430px) {
+    .loading-page .h1-wrapper {
+        width: calc(100% - 1.1rem - 1.1rem);
+    }
+
+    .loading-page h1 {
+        font-size: calc(6rem * 0.4);
+    }
+
+    @keyframes spin-to-left-loading {
+        0% { left: 0; }
+        100% { left: calc(-424.48px - 1.3rem); }
+    }
+}

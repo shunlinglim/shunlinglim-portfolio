@@ -1,6 +1,6 @@
 import './Hero.css';
 
-export function Hero() {
+export function Hero({ isVisible }) {
 
     return (
         <section className='hero'>
@@ -20,7 +20,7 @@ export function Hero() {
                     </div>
                 </div>
                 <a href="#about-me">
-                    <div className="clickable-range">
+                    <div className="clickable-range" style={{cursor: isVisible ? 'default' : 'pointer'}}>
                         <div className="arrow-down" />
                     </div>
                 </a>

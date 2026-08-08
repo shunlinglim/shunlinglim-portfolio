@@ -1,9 +1,9 @@
 import './Hero.css';
 
-export function Hero({ isVisible }) {
+export function Hero({ isVisible, isFading }) {
 
     return (
-        <section className='hero'>
+        <section className='hero' style={{opacity: isFading ? '1' : '0'}}>
             <div className='hero-container'>
                 <div className='hero-heading'>
                     <div className="main">

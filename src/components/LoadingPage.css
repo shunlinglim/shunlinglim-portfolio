@@ -13,7 +13,7 @@ section.loading-page {
     background-image: url('../assets/wallpaper-gradient.png');
     background-size: cover;
     background-position: center;
-    transition: opacity 1s ease-in-out 1s;
+    transition: opacity 1s ease-in-out 2s;
 }
 
 .loading-page.loading-fade-out {

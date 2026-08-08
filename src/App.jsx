@@ -38,7 +38,7 @@ function App() {
             setTimeout(() => {
                 setIsVisible(false);
                 unlockScroll();
-            }, 2000);
+            }, 3000);
         };
 
         if (isVisible) {
@@ -60,7 +60,7 @@ function App() {
     return (
         <>
             {isVisible && <LoadingPage isFading={isFading} />}
-            <Hero isVisible={isVisible}/>
+            <Hero isVisible={isVisible} isFading={isFading} />
             <Nav />
             <AboutMe />
             <Projects />

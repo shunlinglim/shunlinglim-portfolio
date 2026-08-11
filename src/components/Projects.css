@@ -85,6 +85,7 @@ section.projects {
 }
 
 .projects .dev {
+    height: 9rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -313,6 +314,10 @@ section.projects {
 
     .projects .dev h2 {
         font-size: calc(1.7rem * 0.58);
+    }
+
+    .projects .dev {
+        height: 14rem;
     }
 
     .projects .dev > div {

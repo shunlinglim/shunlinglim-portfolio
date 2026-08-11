@@ -667,3 +667,16 @@ section.hero {
         }
     }
 }
+
+@media (hover: none) and (pointer: coarse) {
+    section.hero,
+    .hero h1,
+    .hero p,
+    .hero .line,
+    .hero .clickable-range::before,
+    .hero .arrow-down::before,
+    .hero .arrow-down::after {
+        background-attachment: scroll;
+        background-position: center center;
+    }
+}

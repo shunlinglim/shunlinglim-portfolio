@@ -26,3 +26,13 @@ body {
 #contact-me {
     scroll-margin-top: 5rem; 
 }
+
+@keyframes spin-to-left-1 {
+    0% { left: 0; }
+    75%, 100% { left: calc(-1 * var(--slide-distance)); }
+}
+
+@keyframes spin-to-left-2 {
+    0% { left: 0; }
+    100% { left: calc(-1 * var(--slide-distance)); }
+}

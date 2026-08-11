@@ -21,7 +21,7 @@ section.loading-page {
 }
 
 .loading-page .h1-wrapper {
-    width: 1061.19px;
+    width: var(--h1-width);
     overflow: hidden;
     color: var(--white);
 }
@@ -33,12 +33,7 @@ section.loading-page {
     justify-content: flex-start;
     align-items: center;
     gap: 5rem;
-    animation: spin-to-left-loading 10s infinite ease-in-out;
-}
-
-@keyframes spin-to-left-loading {
-    0% { left: 0; }
-    75%, 100% { left: calc(-1061.19px - 5rem); }
+    animation: spin-to-left-1 10s infinite ease-in-out;
 }
 
 .loading-page h1 {
@@ -54,96 +49,42 @@ section.loading-page {
 }
 
 @media (max-width: 1460px) {
-    .loading-page .h1-wrapper {
-        width: 955.08px;
-    }
-
     .loading-page h1 {
         font-size: calc(6rem * 0.9);
-    }
-
-    @keyframes spin-to-left-loading {
-        0% { left: 0; }
-        75%, 100% { left: calc(-955.08px - 5rem); }
     }
 }
 
 @media (max-width: 1330px) {
-    .loading-page .h1-wrapper {
-        width: 848.95px;
-    }
-
     .loading-page h1 {
         font-size: calc(6rem * 0.8);
-    }
-
-    @keyframes spin-to-left-loading {
-        0% { left: 0; }
-        75%, 100% { left: calc(-848.95px - 5rem); }
     }
 }
 
 @media (max-width: 1210px) {
-    .loading-page .h1-wrapper {
-        width: 795.89px;
-    }
-
     .loading-page h1 {
         font-size: calc(6rem * 0.75);
-    }
-
-    @keyframes spin-to-left-loading {
-        0% { left: 0; }
-        75%, 100% { left: calc(-795.89px - 5rem); }
     }
 }
 
 @media (max-width: 1150px) {
-    .loading-page .h1-wrapper {
-        width: 742.84px;
-    }
-
     .loading-page h1 {
         font-size: calc(6rem * 0.7);
-    }
-
-    @keyframes spin-to-left-loading {
-        0% { left: 0; }
-        75%, 100% { left: calc(-742.84px - 5rem); }
     }
 }
 
 @media (max-width: 1070px) {
-    .loading-page .h1-wrapper {
-        width: 689.78px;
-    }
-
-    .hero .group {
+    .loading-page .group {
         gap: 3rem;
     }
 
     .loading-page h1 {
         font-size: calc(6rem * 0.65);
     }
-
-    @keyframes spin-to-left-loading {
-        0% { left: 0; }
-        75%, 100% { left: calc(-689.78px - 3rem); }
-    }
 }
 
 @media (max-width: 930px) {
-    .loading-page .h1-wrapper {
-        width: 636.71px;
-    }
-
     .loading-page h1 {
         font-size: calc(6rem * 0.6);
-    }
-
-    @keyframes spin-to-left-loading {
-        0% { left: 0; }
-        75%, 100% { left: calc(-636.71px - 3rem); }
     }
 }
 
@@ -153,16 +94,11 @@ section.loading-page {
     }
 
     .loading-page .group {
-        animation: spin-to-left-loading 10s infinite linear;
+        animation: spin-to-left-2 10s infinite linear;
     }
 
     .loading-page h1 {
         font-size: calc(6rem * 0.55);
-    }
-
-    @keyframes spin-to-left-loading {
-        0% { left: 0; }
-        100% { left: calc(-583.65px - 3rem); }
     }
 }
 
@@ -171,13 +107,8 @@ section.loading-page {
         font-size: calc(6rem * 0.5);
     }
 
-    .hero .group {
+    .loading-page .group {
         gap: 2rem;
-    }
-
-    @keyframes spin-to-left-loading {
-        0% { left: 0; }
-        100% { left: calc(-530.6px - 2rem); }
     }
 }
 
@@ -198,13 +129,8 @@ section.loading-page {
         font-size: calc(6rem * 0.45);
     }
 
-    .hero .group {
+    .loading-page .group {
         gap: 1.3rem;
-    }
-
-    @keyframes spin-to-left-loading {
-        0% { left: 0; }
-        100% { left: calc(-477.54px - 1.3rem); }
     }
 }
 
@@ -221,10 +147,5 @@ section.loading-page {
 
     .loading-page h1 {
         font-size: calc(6rem * 0.4);
-    }
-
-    @keyframes spin-to-left-loading {
-        0% { left: 0; }
-        100% { left: calc(-424.48px - 1.3rem); }
     }
 }

@@ -43,7 +43,7 @@ section.hero {
 }
 
 .hero .main {
-    width: 1061.19px;
+    width: var(--h1-width);
 }
 
 .hero .h1-wrapper {
@@ -58,12 +58,7 @@ section.hero {
     justify-content: flex-start;
     align-items: center;
     gap: 5rem;
-    animation: spin-to-left-hero 10s infinite ease-in-out;
-}
-
-@keyframes spin-to-left-hero {
-    0% { left: 0; }
-    75%, 100% { left: calc(-1061.19px - 5rem); }
+    animation: spin-to-left-1 10s infinite ease-in-out;
 }
 
 .hero h1 {
@@ -223,17 +218,8 @@ section.hero {
         font-size: calc(2rem * 0.9);
     }
 
-    .hero .main{
-        width: 955.08px;
-    }
-
     .hero h1 {
         font-size: calc(6rem * 0.9);
-    }
-
-    @keyframes spin-to-left-hero {
-        0% { left: 0; }
-        75%, 100% { left: calc(-955.08px - 5rem); }
     }
 
     .hero .line{
@@ -265,17 +251,8 @@ section.hero {
         font-size: calc(2rem * 0.8);
     }
 
-    .hero .main{
-        width: 848.95px;
-    }
-
     .hero h1 {
         font-size: calc(6rem * 0.8);
-    }
-
-    @keyframes spin-to-left-hero {
-        0% { left: 0; }
-        75%, 100% { left: calc(-848.95px - 5rem); }
     }
 
     .hero .line{
@@ -302,17 +279,8 @@ section.hero {
         font-size: calc(2rem * 0.75);
     }
 
-    .hero .main{
-        width: 795.89px;
-    }
-
     .hero h1 {
         font-size: calc(6rem * 0.75);
-    }
-
-    @keyframes spin-to-left-hero {
-        0% { left: 0; }
-        75%, 100% { left: calc(-795.89px - 5rem); }
     }
 
     .hero .line{
@@ -329,17 +297,8 @@ section.hero {
         font-size: calc(2rem * 0.7);
     }
 
-    .hero .main{
-        width: 742.84px;
-    }
-
     .hero h1 {
         font-size: calc(6rem * 0.7);
-    }
-
-    @keyframes spin-to-left-hero {
-        0% { left: 0; }
-        75%, 100% { left: calc(-742.84px - 5rem); }
     }
 
     .hero .line{
@@ -405,21 +364,12 @@ section.hero {
         font-size: calc(2rem * 0.65);
     }
 
-    .hero .main{
-        width: 689.78px;
-    }
-
     .hero .group {
         gap: 3rem;
     }
 
     .hero h1 {
         font-size: calc(6rem * 0.65);
-    }
-
-    @keyframes spin-to-left-hero {
-        0% { left: 0; }
-        75%, 100% { left: calc(-689.78px - 3rem); }
     }
 }
 
@@ -466,17 +416,8 @@ section.hero {
         font-size: calc(2rem * 0.6);
     }
 
-    .hero .main{
-        width: 636.71px;
-    }
-
     .hero h1 {
         font-size: calc(6rem * 0.6);
-    }
-
-    @keyframes spin-to-left-hero {
-        0% { left: 0; }
-        75%, 100% { left: calc(-636.71px - 3rem); }
     }
 
     .hero .arrow-down::before,
@@ -507,21 +448,16 @@ section.hero {
         width: 100%;
     }
 
-    .hero .main{
+    .hero .main {
         width: 100%;
-    }    
+    }
 
     .hero .group {
-        animation: spin-to-left-hero 10s infinite linear;
+        animation: spin-to-left-2 10s infinite linear;
     }
 
     .hero h1 {
         font-size: calc(6rem * 0.55);
-    }
-
-    @keyframes spin-to-left-hero {
-        0% { left: 0; }
-        100% { left: calc(-583.65px - 3rem); }
     }
 
     @media (max-height: 510px) {
@@ -553,11 +489,6 @@ section.hero {
 
     .hero h1 {
         font-size: calc(6rem * 0.5);
-    }
-
-    @keyframes spin-to-left-hero {
-        0% { left: 0; }
-        100% { left: calc(-530.6px - 2rem); }
     }
 }
 
@@ -610,11 +541,6 @@ section.hero {
         font-size: calc(6rem * 0.45);
     }
 
-    @keyframes spin-to-left-hero {
-        0% { left: 0; }
-        100% { left: calc(-477.54px - 1.3rem); }
-    }
-
     @media (max-height: 300px) {
         .hero .hero-container {
             border-radius: 0;
@@ -642,11 +568,6 @@ section.hero {
 
     .hero h1 {
         font-size: calc(6rem * 0.4);
-    }
-
-    @keyframes spin-to-left-hero {
-        0% { left: 0; }
-        100% { left: calc(-424.48px - 1.3rem); }
     }
 
     @media (max-height: 570px) {

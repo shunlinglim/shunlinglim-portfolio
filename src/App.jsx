@@ -10,7 +10,10 @@ import { LoadingPage } from './components/LoadingPage'
 function App() {
     const [isFading, setIsFading] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
+    const [h1textWidth, setH1TextWidth] = useState(0);
+    const [slideDistance, setSlideDistance] = useState(0);
 
+    //Render Loading Page
     useEffect(() => {
         let lockedScrollY = 0;
 
@@ -57,10 +60,60 @@ function App() {
         };
     }, [isVisible]);
 
+    //Calculate h1 text width
+    useEffect(() => {
+        const calculateWidth = () => {
+            const h1 = document.querySelector('.hero h1');
+
+            if (!h1) return;
+
+            const styles = window.getComputedStyle(h1);
+
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+
+            context.font = `
+            ${styles.fontStyle}
+            ${styles.fontWeight}
+            ${styles.fontSize}
+            ${styles.fontFamily}
+        `;
+
+            let textWidth = context.measureText(h1.textContent).width;
+
+            // Add letter spacing
+            const letterSpacing = parseFloat(styles.letterSpacing);
+
+            if (!isNaN(letterSpacing)) {
+                textWidth += letterSpacing * (h1.textContent.length - 1);
+            }
+
+            // Get the actual gap from .group
+            const group = document.querySelector('.hero .group');
+            const groupStyles = window.getComputedStyle(group);
+            const gap = parseFloat(groupStyles.columnGap);
+
+            setH1TextWidth(textWidth);
+            setSlideDistance(textWidth + gap);
+        };
+
+        calculateWidth();
+
+        const handleResize = () => {
+            requestAnimationFrame(calculateWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <>
-            {isVisible && <LoadingPage isFading={isFading} />}
-            <Hero isVisible={isVisible} isFading={isFading} />
+            {isVisible && <LoadingPage isFading={isFading} h1textWidth={h1textWidth} slideDistance={slideDistance} />}
+            <Hero isVisible={isVisible} isFading={isFading} h1textWidth={h1textWidth} slideDistance={slideDistance} />
             <Nav />
             <AboutMe />
             <Projects />

@@ -36,13 +36,46 @@ section.hero {
 .hero p {
     background-image: url('../assets/wallpaper.png');
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero .line{
+    height: 0.8rem;
+    width: 100%;
+    background-color: #78776f;
+    border-radius: 1rem;
+    background-image: url('../assets/wallpaper.png');
+    background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    background-clip: text;
-    color: transparent;
+}
+
+@-moz-document url-prefix() {
+    .hero h1,
+    .hero p {
+        background-image: url('../assets/wallpaper-gradient.png');
+        background-attachment: scroll;
+    }
+}
+
+@supports (-webkit-hyphens: none) {
+    .hero h1,
+    .hero p,
+    .hero .line {
+        background-image: url('../assets/wallpaper-gradient.png');
+        background-attachment: scroll;
+    }
 }
 
 .hero .main {
+    position: relative;
+    overflow: hidden;
     width: var(--h1-width);
 }
 
@@ -82,17 +115,6 @@ section.hero {
 .hero p:nth-of-type(2) {
     text-align: end;
     margin-top: 0.5rem;
-}
-
-.hero .line{
-    height: 0.8rem;
-    width: 100%;
-    background-color: #78776f;
-    border-radius: 1rem;
-    background-image: url('../assets/wallpaper.png');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
 }
 
 .hero .hero-container a {
